@@ -211,6 +211,10 @@ $settings['keep_downloadlist'] = true;
 # moeten we een watchlist bijhouden?
 $settings['keep_watchlist'] = true;
 
+# Standaard sorteer methode bij zoeken: relevance, title, poster, stamp etc 
+$settings['search_def_sort'] = 'stamp';
+
+
 # highlight nieuwe items - cookies
 $settings['cookie_expires'] = 30; // aantal dagen dat cookie bewaard moet worden
 
