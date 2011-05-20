@@ -62,12 +62,12 @@
 						<h4 class="sorting">Sorteren op:</h4>
                         <div><input type="hidden" name="sortdir" value="<?php if($activefilter['sortby'] == "stamp" || $activefilter['sortby'] == "spotrating" || $activefilter['sortby'] == "commentcount") {echo "DESC";} else {echo "ASC";} ?>"></div>
                         <ul class="search sorting">
-                            <li> <input type="radio" name="sortby" value="" <?php echo $activefilter['sortby'] == "" ? 'checked="checked"' : "" ?>><label>Relevantie</label> </li>
-                        	<li> <input type="radio" name="sortby" value="title" <?php echo $activefilter['sortby'] == "title" ? 'checked="checked"' : "" ?>><label>Titel</label> </li>
-                            <li> <input type="radio" name="sortby" value="poster" <?php echo $activefilter['sortby'] == "poster" ? 'checked="checked"' : "" ?>><label>Poster</label> </li>
-                        	<li> <input type="radio" name="sortby" value="stamp" <?php echo $activefilter['sortby'] == "stamp" ? 'checked="checked"' : "" ?>><label>Datum</label> </li>
-                            <li> <input type="radio" name="sortby" value="commentcount" <?php echo $activefilter['sortby'] == "commentcount" ? 'checked="checked"' : "" ?>><label>Comments</label> </li>
-                            <li> <input type="radio" name="sortby" value="spotrating" <?php echo $activefilter['sortby'] == "spotrating" ? 'checked="checked"' : "" ?>><label>Rating</label> </li>
+                            <li> <input type="radio" name="sortby" value="" <?php echo ($activefilter['sortby'] == "" || $settings->get('search_def_sort') == 'relevance') ? 'checked="checked"' : "" ?>><label>Relevantie</label> </li>
+                        	<li> <input type="radio" name="sortby" value="title" <?php echo ($activefilter['sortby'] == "title" || $settings->get('search_def_sort') == 'title') ? 'checked="checked"' : "" ?>><label>Titel</label> </li>
+                            <li> <input type="radio" name="sortby" value="poster" <?php echo ($activefilter['sortby'] == "poster" || $settings->get('search_def_sort') == 'poster') ? 'checked="checked"' : "" ?>><label>Poster</label> </li>
+                        	<li> <input type="radio" name="sortby" value="stamp" <?php echo ($activefilter['sortby'] == "stamp" || $settings->get('search_def_sort') == 'stamp') ? 'checked="checked"' : "" ?>><label>Datum</label> </li>
+                            <li> <input type="radio" name="sortby" value="commentcount" <?php echo ($activefilter['sortby'] == "commentcount" || $settings->get('search_def_sort') == 'commentcount') ? 'checked="checked"' : "" ?>><label>Comments</label> </li>
+                            <li> <input type="radio" name="sortby" value="spotrating" <?php echo ($activefilter['sortby'] == "spotrating" || $settings->get('search_def_sort') == 'spotrating') ? 'checked="checked"' : "" ?>><label>Rating</label> </li>
                         </ul>
 
 						<h4>Filtering</h4>
