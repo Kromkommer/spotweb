@@ -211,7 +211,7 @@ $settings['keep_downloadlist'] = true;
 # moeten we een watchlist bijhouden?
 $settings['keep_watchlist'] = true;
 
-# Standaard sorteer methode bij zoeken: relevance, title, poster, stamp etc 
+# Standaard sorteer methode bij zoeken: relevance (leeg laten), title, poster, stamp, commentcount, spotrating 
 $settings['search_def_sort'] = 'stamp';
 
 
